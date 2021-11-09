@@ -1,5 +1,4 @@
-// Business logic
-function Ticket(age, time, movie) {
+export default function Ticket(age, time, movie) {
   this.age = age;
   this.time = time;
   this.movie = movie;
@@ -37,17 +36,3 @@ Ticket.prototype.cost = function() {
   return ticketTotal;
 }
 
-// UI logic
-
-$(document).ready(function() {
-  $("form#movie-choice").submit(function(event) {
-    event.preventDefault();
-    const age = $("select#age option:selected").val();
-    const time = $("select#time option:selected").val();
-    const movie = $("select#movie option:selected").val();
-    let ticket = new Ticket(age, time, movie);
-    console.log(ticket);
-    $("#ticket-total").html("$" + ticket.cost())
-    $("#show-results").show();
-  });
-});
