@@ -7,7 +7,7 @@ describe('Ticket', () => {
   test('should correctly create a ticket object with an age group, time of day, and movie', () => {
     const ticket = new Ticket("adult", "evening", "dune");
     expect(ticket.age).toEqual("adult");
-    expect(ticket.age).toEqual("evening");
-    expect(ticket.age).toEqual("dune");
+    expect(ticket.time).toEqual("evening");
+    expect(ticket.movie).toEqual("dune");
   });
 });
