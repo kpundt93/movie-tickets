@@ -25,4 +25,19 @@ describe('Ticket', () => {
     const minorTicket = new Ticket("minor", "", "");
     expect(minorTicket.cost()).toEqual(10);
   });
+
+  test('should correctly display cost of an adult matinee ticket', () => {
+    const adultMatineeTicket = new Ticket("adult", "matinee", "");
+    expect(adultMatineeTicket.cost()).toEqual(9);
+  });
+
+  test('should correctly display cost of a senior matinee ticket', () => {
+    const seniorMatineeTicket = new Ticket("senior", "matinee", "");
+    expect(seniorMatineeTicket.cost()).toEqual(4);
+  });
+
+  test('should correctly display cost of a minor matinee ticket', () => {
+    const minorMatineeTicket = new Ticket("minor", "matinee", "");
+    expect(minorMatineeTicket.cost()).toEqual(6);
+  });
 });
